@@ -1,0 +1,4 @@
+[data-session-tabs] { display:flex; flex-direction:column; min-width:0; flex-shrink:0; }
+[data-session-tabs][data-show-session] { flex:1; min-height:0; }
+[data-thread-window][data-session-tabs-active] > :not([data-session-tabs]) { display:none !important; }
+[data-session-tabs-inline-fork] { display:none !important; }
