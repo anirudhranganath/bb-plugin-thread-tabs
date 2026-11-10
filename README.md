@@ -48,7 +48,7 @@ BB builds the bundle against the running host's runtime. No core app files are p
 
 ## Compatibility and security
 
-Verified on BB 0.48.1. The manifest limits installs to BB 0.48.x because the two DOM integrations depend on the host UI. Automated source tests use the newest publicly available SDK (0.6.94); the installed host builds against SDK 0.6.104. `bb plugin types --check` currently reports this upstream publication gap. Recheck and repin when that SDK is published.
+Verified on BB 0.48.1 and 0.49.0. Version 0.1.1 declares minimum requirements of BB 0.48.1 and SDK 0.6.94 without upper version limits. This avoids disabling the plugin solely because BB releases a new minor version. Version 0.1.0 is restricted to BB 0.48.x. Source tests keep an exact SDK development dependency for reproducible builds; BB supplies its own runtime SDK (0.6.132 on the tested BB 0.49.0 host). The SDK pin warning is separate from runtime compatibility. Future host UI changes may still require fixes to the two DOM integrations.
 
 No extra account or service is required beyond BB and your installed providers. Fork snapshots can contain private conversation data; sending one shares it with the selected provider. Full transcript exports can include sensitive tool output. See [SECURITY.md](SECURITY.md) for data handling, resource limits, and crash-recovery boundaries. Saved closed-tab history consumes BB's finite per-key storage; the plugin refuses new drafts near the limit without deleting old tabs.
 
