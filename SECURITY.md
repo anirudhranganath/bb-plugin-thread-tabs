@@ -16,7 +16,7 @@ Before adding a draft, the plugin rejects saved group JSON larger than 200 KiB. 
 
 ## Remaining boundaries
 
-The tab placement and message menu use BB DOM structure and English action labels. These are compatibility dependencies, not stable SDK contracts. Verified host: BB 0.48.1. Mobile layouts are not verified. Different sessions edit the same worktree concurrently, with their own native permission controls.
+The tab placement and message menu use BB DOM structure and English action labels. These are compatibility dependencies, not stable SDK contracts. Verified hosts: BB 0.48.1 and 0.49.0. Mobile layouts are not verified. Different sessions edit the same worktree concurrently, with their own native permission controls.
 
 BB does not expose an atomic, idempotent create-and-attach transaction. A server/process crash after a provider session is created but before its recovery ID is stored may leave an orphan hidden session. Review hidden sessions before retrying after such a crash. Ordinary retries and concurrent submissions are covered by tests; crash recovery cannot promise exactly-once provider execution.
 
