@@ -3,8 +3,8 @@
   "version": "0.1.1",
   "type": "module",
   "engines": {
-    "bb": ">=0.48.1 <0.50.0",
-    "bbPluginSdk": ">=0.6.94 <0.7.0",
+    "bb": ">=0.48.1",
+    "bbPluginSdk": ">=0.6.94",
     "node": ">=22.18.0"
   },
   "bb": {
